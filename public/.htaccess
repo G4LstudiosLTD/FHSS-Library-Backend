@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Allow access to the storage directory
+    <IfModule mod_alias.c>
+        Alias /storage /path/to/your/project/storage/app/public
+        <Directory /path/to/your/project/storage/app/public>
+            Options +FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+    </IfModule>
+</IfModule>

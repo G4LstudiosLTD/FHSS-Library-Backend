@@ -1,0 +1,169 @@
+GET http://127.0.0.1:8000/api/studio/discover
+
+###
+GET http://127.0.0.1:8000/api/studio/show/1
+
+###
+POST http://127.0.0.1:8000/api/user/sendotp
+Content-Type: application/json
+
+{
+    "number": "2348118419607"
+}
+
+###
+POST http://127.0.0.1:8000/api/user/verifyotp
+Content-Type: application/json
+
+{
+    "number": "2348118419607",
+    "otp": "313002"
+}
+
+###
+GET http://127.0.0.1:8000/api/subject/fetch
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YjRlNjQ4My1kMmRjLTRiNDYtOTM2OS1iZGU0OTY2MmQ0MjgiLCJqdGkiOiIxMWNkMTZmYmUxNDFiMzY0ZmE3NzIyN2EwODY1MjNiYzAwZWU1MzIzZTkxNTQ4NDg2ZjQwYWQzZTk2NTY3YmVmY2E4ZGI3ZTBlMDkzNmZkYyIsImlhdCI6MTcwNzY2MDE3Ny41MDUyMDgsIm5iZiI6MTcwNzY2MDE3Ny41MDUyMTEsImV4cCI6MTczOTI4MjU3Ny40OTQ5MzgsInN1YiI6IjQiLCJzY29wZXMiOlsiKiJdfQ.RFktWkabOQlTYdrZTYgaSK7I4kr4TQlfs-BonqgsLKzZoz7G772rCQRkGiHlQwC7LHa7l3wBSfNXZgcxxK0R3BP4mBxG-LZvC8R1VSxWJQSlh_kUV9DnC9OcL7-9QRHjygnDrrhTm3j9tfEdXWaHQd3wy0I5fgIlty5PK1LXStLe2Z0LEPXtH8pOPiHxJ2vWc0ZvMhpoTNxWfA4ZGJ-VRZ3jVwxBKLOD49XQ7cnQLv7u5DeADsfduMe_JzevWwfFqr8kzEnYqwWFOdCas0zaGAJeg_bpYs1d7Rov-8gPiFnmqj4pAncTGZHhc9hpcF_5yuju_DNXpoWvRbAc0SVNpCsluRW7FIZo_Fzg8GII-w0TRuvUG29A7tSAtsvxHKIfFEBSEkO2knmcWACa4KdPx6q_tbhZBuAO1oFeutiQ1obWxV4zkb702KfA9UbJ1tzs2kZGyiNR78VTE3jOOlY7AJk8hG8Y3kwEDkTdkm1VUJxhsJkZXR31pxSxl5iAFgtt-zwWRcdc2PV-wusNIVmp3w1_dT-Progv4R7yCdA7WiMOB500jRIwOU2vfKpzf53GddZjYM46JOrIMqPQNN_4g4f8x2t5OIXwSeqLaRh83QD8X_t4GzgPmsk6YGfPYjjZz8Y7SmI3U8nlrtfSebfQdTs-LiKVjYoDw6pE9CrDpc4
+
+{
+    "school_id": "1",
+    "grade_id": "1"
+}
+
+###
+POST http://127.0.0.1:8000/api/user/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "fountain",
+    "password": "password"
+}
+
+###
+GET http://127.0.0.1:8000/api/user/refreshToken?refresh_token=def50200ca395dcbeb5188d4e4cef586f87e068e4674a92be9286a84e399e0ca6d25cc997774a01307c174e86a864c257c4ee0810e98166d16bf9897480d280e9bbb650042d726059101330e6ab0237d3657f1534b3f4faf52864b63ac99f52a6e741af38e50454bf5bd2e7fecf78561bf5ff937df33462c53e8e9d2acce3b169602572439b51b4662449307c28a70e5047084ef28ca79ab5d06fada5e6eb544e2a6e33576f837b569324b21bc0ff5ba61294bd7ba319b3a3eb9b8948ecee711adb8dfc6819ffe898b849175b03836acfc23fe5980076c198b8b128b5a131571e921369a5b457925be5ea5bf9382417ac7158b3c8967d7d3f29a1771a2750e44c56718d0e8d25d45c4e1aed1a5bb8fe4bbea58a2bd1bb7b56a924025997633ae631d69e5b64677486bf08406fe47f0d3902a11f4a8099715a6c9747caae8f2843983089e9a57796dfc7f01146beafaea78d408a5b6bc2dfff002aa79d21502f02cab64cbcb9f89e9b6c9d074200e6b2c8a531f60f2ac525a7ccf9b1be3e6d359ab4779f2374bce
+Content-Type: application/json
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/subject/store
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YjRlNjQ4My1kMmRjLTRiNDYtOTM2OS1iZGU0OTY2MmQ0MjgiLCJqdGkiOiIxMWNkMTZmYmUxNDFiMzY0ZmE3NzIyN2EwODY1MjNiYzAwZWU1MzIzZTkxNTQ4NDg2ZjQwYWQzZTk2NTY3YmVmY2E4ZGI3ZTBlMDkzNmZkYyIsImlhdCI6MTcwNzY2MDE3Ny41MDUyMDgsIm5iZiI6MTcwNzY2MDE3Ny41MDUyMTEsImV4cCI6MTczOTI4MjU3Ny40OTQ5MzgsInN1YiI6IjQiLCJzY29wZXMiOlsiKiJdfQ.RFktWkabOQlTYdrZTYgaSK7I4kr4TQlfs-BonqgsLKzZoz7G772rCQRkGiHlQwC7LHa7l3wBSfNXZgcxxK0R3BP4mBxG-LZvC8R1VSxWJQSlh_kUV9DnC9OcL7-9QRHjygnDrrhTm3j9tfEdXWaHQd3wy0I5fgIlty5PK1LXStLe2Z0LEPXtH8pOPiHxJ2vWc0ZvMhpoTNxWfA4ZGJ-VRZ3jVwxBKLOD49XQ7cnQLv7u5DeADsfduMe_JzevWwfFqr8kzEnYqwWFOdCas0zaGAJeg_bpYs1d7Rov-8gPiFnmqj4pAncTGZHhc9hpcF_5yuju_DNXpoWvRbAc0SVNpCsluRW7FIZo_Fzg8GII-w0TRuvUG29A7tSAtsvxHKIfFEBSEkO2knmcWACa4KdPx6q_tbhZBuAO1oFeutiQ1obWxV4zkb702KfA9UbJ1tzs2kZGyiNR78VTE3jOOlY7AJk8hG8Y3kwEDkTdkm1VUJxhsJkZXR31pxSxl5iAFgtt-zwWRcdc2PV-wusNIVmp3w1_dT-Progv4R7yCdA7WiMOB500jRIwOU2vfKpzf53GddZjYM46JOrIMqPQNN_4g4f8x2t5OIXwSeqLaRh83QD8X_t4GzgPmsk6YGfPYjjZz8Y7SmI3U8nlrtfSebfQdTs-LiKVjYoDw6pE9CrDpc4
+
+    {
+        "school_id": "1",
+        "subject_name": "Basic Science",
+        "subject_description": "Biology Science"
+    }
+
+###
+PUT http://127.0.0.1:8000/api/subject/update/1/3
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YjRlNjQ4My1kMmRjLTRiNDYtOTM2OS1iZGU0OTY2MmQ0MjgiLCJqdGkiOiIxMWNkMTZmYmUxNDFiMzY0ZmE3NzIyN2EwODY1MjNiYzAwZWU1MzIzZTkxNTQ4NDg2ZjQwYWQzZTk2NTY3YmVmY2E4ZGI3ZTBlMDkzNmZkYyIsImlhdCI6MTcwNzY2MDE3Ny41MDUyMDgsIm5iZiI6MTcwNzY2MDE3Ny41MDUyMTEsImV4cCI6MTczOTI4MjU3Ny40OTQ5MzgsInN1YiI6IjQiLCJzY29wZXMiOlsiKiJdfQ.RFktWkabOQlTYdrZTYgaSK7I4kr4TQlfs-BonqgsLKzZoz7G772rCQRkGiHlQwC7LHa7l3wBSfNXZgcxxK0R3BP4mBxG-LZvC8R1VSxWJQSlh_kUV9DnC9OcL7-9QRHjygnDrrhTm3j9tfEdXWaHQd3wy0I5fgIlty5PK1LXStLe2Z0LEPXtH8pOPiHxJ2vWc0ZvMhpoTNxWfA4ZGJ-VRZ3jVwxBKLOD49XQ7cnQLv7u5DeADsfduMe_JzevWwfFqr8kzEnYqwWFOdCas0zaGAJeg_bpYs1d7Rov-8gPiFnmqj4pAncTGZHhc9hpcF_5yuju_DNXpoWvRbAc0SVNpCsluRW7FIZo_Fzg8GII-w0TRuvUG29A7tSAtsvxHKIfFEBSEkO2knmcWACa4KdPx6q_tbhZBuAO1oFeutiQ1obWxV4zkb702KfA9UbJ1tzs2kZGyiNR78VTE3jOOlY7AJk8hG8Y3kwEDkTdkm1VUJxhsJkZXR31pxSxl5iAFgtt-zwWRcdc2PV-wusNIVmp3w1_dT-Progv4R7yCdA7WiMOB500jRIwOU2vfKpzf53GddZjYM46JOrIMqPQNN_4g4f8x2t5OIXwSeqLaRh83QD8X_t4GzgPmsk6YGfPYjjZz8Y7SmI3U8nlrtfSebfQdTs-LiKVjYoDw6pE9CrDpc4
+
+    {
+        "subject_name": "Basic Technology",
+        "subject_description": "Basic Tech"
+    }
+
+###
+POST http://127.0.0.1:8000/api/subject/topic/create
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YjRlNjQ4My1kMmRjLTRiNDYtOTM2OS1iZGU0OTY2MmQ0MjgiLCJqdGkiOiIxMWNkMTZmYmUxNDFiMzY0ZmE3NzIyN2EwODY1MjNiYzAwZWU1MzIzZTkxNTQ4NDg2ZjQwYWQzZTk2NTY3YmVmY2E4ZGI3ZTBlMDkzNmZkYyIsImlhdCI6MTcwNzY2MDE3Ny41MDUyMDgsIm5iZiI6MTcwNzY2MDE3Ny41MDUyMTEsImV4cCI6MTczOTI4MjU3Ny40OTQ5MzgsInN1YiI6IjQiLCJzY29wZXMiOlsiKiJdfQ.RFktWkabOQlTYdrZTYgaSK7I4kr4TQlfs-BonqgsLKzZoz7G772rCQRkGiHlQwC7LHa7l3wBSfNXZgcxxK0R3BP4mBxG-LZvC8R1VSxWJQSlh_kUV9DnC9OcL7-9QRHjygnDrrhTm3j9tfEdXWaHQd3wy0I5fgIlty5PK1LXStLe2Z0LEPXtH8pOPiHxJ2vWc0ZvMhpoTNxWfA4ZGJ-VRZ3jVwxBKLOD49XQ7cnQLv7u5DeADsfduMe_JzevWwfFqr8kzEnYqwWFOdCas0zaGAJeg_bpYs1d7Rov-8gPiFnmqj4pAncTGZHhc9hpcF_5yuju_DNXpoWvRbAc0SVNpCsluRW7FIZo_Fzg8GII-w0TRuvUG29A7tSAtsvxHKIfFEBSEkO2knmcWACa4KdPx6q_tbhZBuAO1oFeutiQ1obWxV4zkb702KfA9UbJ1tzs2kZGyiNR78VTE3jOOlY7AJk8hG8Y3kwEDkTdkm1VUJxhsJkZXR31pxSxl5iAFgtt-zwWRcdc2PV-wusNIVmp3w1_dT-Progv4R7yCdA7WiMOB500jRIwOU2vfKpzf53GddZjYM46JOrIMqPQNN_4g4f8x2t5OIXwSeqLaRh83QD8X_t4GzgPmsk6YGfPYjjZz8Y7SmI3U8nlrtfSebfQdTs-LiKVjYoDw6pE9CrDpc4
+
+    {
+        "subject_id": "2",
+        "grade_id": "1",
+        "school_id": "1",
+        "topic": "introduction to Cat",
+        "description": "Here we will talk about the introduction to the cat network"
+    }
+
+###
+GET http://127.0.0.1:8000/api/subject/topic/fetch
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YjRlNjQ4My1kMmRjLTRiNDYtOTM2OS1iZGU0OTY2MmQ0MjgiLCJqdGkiOiIxMWNkMTZmYmUxNDFiMzY0ZmE3NzIyN2EwODY1MjNiYzAwZWU1MzIzZTkxNTQ4NDg2ZjQwYWQzZTk2NTY3YmVmY2E4ZGI3ZTBlMDkzNmZkYyIsImlhdCI6MTcwNzY2MDE3Ny41MDUyMDgsIm5iZiI6MTcwNzY2MDE3Ny41MDUyMTEsImV4cCI6MTczOTI4MjU3Ny40OTQ5MzgsInN1YiI6IjQiLCJzY29wZXMiOlsiKiJdfQ.RFktWkabOQlTYdrZTYgaSK7I4kr4TQlfs-BonqgsLKzZoz7G772rCQRkGiHlQwC7LHa7l3wBSfNXZgcxxK0R3BP4mBxG-LZvC8R1VSxWJQSlh_kUV9DnC9OcL7-9QRHjygnDrrhTm3j9tfEdXWaHQd3wy0I5fgIlty5PK1LXStLe2Z0LEPXtH8pOPiHxJ2vWc0ZvMhpoTNxWfA4ZGJ-VRZ3jVwxBKLOD49XQ7cnQLv7u5DeADsfduMe_JzevWwfFqr8kzEnYqwWFOdCas0zaGAJeg_bpYs1d7Rov-8gPiFnmqj4pAncTGZHhc9hpcF_5yuju_DNXpoWvRbAc0SVNpCsluRW7FIZo_Fzg8GII-w0TRuvUG29A7tSAtsvxHKIfFEBSEkO2knmcWACa4KdPx6q_tbhZBuAO1oFeutiQ1obWxV4zkb702KfA9UbJ1tzs2kZGyiNR78VTE3jOOlY7AJk8hG8Y3kwEDkTdkm1VUJxhsJkZXR31pxSxl5iAFgtt-zwWRcdc2PV-wusNIVmp3w1_dT-Progv4R7yCdA7WiMOB500jRIwOU2vfKpzf53GddZjYM46JOrIMqPQNN_4g4f8x2t5OIXwSeqLaRh83QD8X_t4GzgPmsk6YGfPYjjZz8Y7SmI3U8nlrtfSebfQdTs-LiKVjYoDw6pE9CrDpc4
+
+    {
+        "subject_id": "2",
+        "grade_id": "1",
+        "school_id": "1"
+    }
+
+
+###
+POST http://127.0.0.1:8000/oauth/token
+Content-Type: application/json
+
+{
+    "grant_type": "password",
+    "client_id": "9b4e6483-d2dc-4b46-9369-bde49662d428",
+    "client_secret": "cUg35nsk3uauhs29jGyAjBulm5pqZYi9lkkN6LNj",
+    "username": "admin@example.com",
+    "password": "password",
+    "scope": "*"
+}
+
+###
+POST http://127.0.0.1:8000/api/user/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "number": "2348118419607",
+    "email": "john.doe@example.com",
+    "username": "fountain",
+    "role": "admin",
+    "password": "password",
+    "password_confirmation": "password"
+}
+
+###
+POST http://127.0.0.1:8000/api/studio/store
+followRedirects: false
+Accept: application/json
+Content-Type: application/json
+
+{
+    "studio_name": "Yakata Studios",
+    "street_address": "Shomolu",
+    "local_government": "Lagos mainland",
+    "state": "Palm Grove",
+    "description": "Very good Studio and all is fine with it",
+    "days_available": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "time_available": ["Afternoon", "Evening"],
+    "max_people": "4",
+    "studio_equipment": "Headphone, Monitors",
+    "studio_fee": "5000/hr",
+    "dedicated_producer": "Yes",
+    "studio_rule": ["no shouting"],
+    "images": []
+}
+
+###
+PUT http://127.0.0.1:8000/api/studio/update/1
+followRedirects: false
+Accept: application/json
+Content-Type: application/json
+
+{
+    "studio_name": "Neutron Studios",
+    "street_address": "Herbert Macauley, Yaba",
+    "local_government": "Lagos mainland",
+    "state": "Akoka",
+    "description": "Very good Studio and all is fine with it",
+    "days_available": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "time_available": ["Afternoon", "Evening"],
+    "max_people": "4",
+    "studio_equipment": "Headphone, Monitors",
+    "studio_fee": "5000/hr",
+    "dedicated_producer": "Yes",
+    "studio_rule": ["no shouting"],
+    "images": []
+}
